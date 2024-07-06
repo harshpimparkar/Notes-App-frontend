@@ -11,11 +11,11 @@ const NoteCard = ({
   onPinNote,
 }) => {
   return (
-    <div className="border rounded p-4  bg-white hover:shadow-xl transition-all ease-in-out cursor-pointer" onClick={onEdit}>
+    <div className="border rounded p-4  bg-white hover:shadow-xl transition-all ease-in-out cursor-pointer">
       <div className="flex items-center justify-between">
         <div>
           <h6 className="text-base font-medium" onClick={onEdit}>{title}</h6>
-          <span className="text-xs text-slate-500" onClick={onEdit}>
+          <span className="text-xs text-slate-500">
             {moment(date).format("D MMMM YY")}
           </span>
         </div>
