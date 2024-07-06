@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AddIcon from "@mui/icons-material/Add";
 import { Footer } from "../components/Footer";
 const LandingPage = () => {
   return (
@@ -15,7 +14,7 @@ const LandingPage = () => {
             <Link to="/">Notes.</Link>
           </div>
         </h2>
-        <div className="font-bold text-black py-2 mr-2 flex justify-between gap-5">
+        <div className="font-bold text-black py-2 mr-2 flex justify-between gap-5 text-center">
           <div className="bg-primary rounded-md p-1.5 text-white hover:bg-blue-700"><Link to="/login">Login</Link></div>
           <div className="bg-primary rounded-md p-1.5 text-white hover:bg-blue-700"><Link to="/create-account">Sign-Up</Link></div>
         </div>
