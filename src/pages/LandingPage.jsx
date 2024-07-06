@@ -12,9 +12,13 @@ const LandingPage = () => {
               alt=""
               className="w-10 h-10 cursor-pointer"
             />
-            <Link to="/">Scribe</Link>
+            <Link to="/">Notes.</Link>
           </div>
         </h2>
+        <div className="font-bold text-black py-2 mr-2 flex justify-between gap-5">
+          <div className="bg-primary rounded-md p-1.5 text-white hover:bg-blue-700"><Link to="/login">Login</Link></div>
+          <div className="bg-primary rounded-md p-1.5 text-white hover:bg-blue-700"><Link to="/create-account">Sign-Up</Link></div>
+        </div>
       </div>
       <div className="overflow-auto">
         <div className="flex flex-col items-center justify-center mt-10 ">
@@ -36,12 +40,6 @@ const LandingPage = () => {
                 className="w-15 h-15 cursor-pointer hover:drop-shadow-2xl"
                 sizes={30}
               />
-            </div>
-          </div>
-          <div className="flex font-bold text-xl pt-7 justify-between">
-            {"Create yout first note by clicking on"}
-            <div className="ml-4">
-              <AddIcon className="bg-blue-600 text-white rounded-md border hover:drop-shadow-2xl transition-all ease-in-out" />
             </div>
           </div>
         </div>
