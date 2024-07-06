@@ -26,7 +26,7 @@ const LandingPage = () => {
               Welcome to
             </div>
             <div className="font-extrabold text-5xl pt bg-slate-900 text-white hover:bg-slate-700 p-2">
-              SCRIBE
+              Notes.
             </div>
           </div>
           <div className="font-bold text-5xl pt-10 text-primary flex flex-col items-center hover:text-6xl transition-all ease-in-out">
