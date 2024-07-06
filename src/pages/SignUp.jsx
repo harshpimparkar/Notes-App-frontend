@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import PasswordInput from "../components/PasswordInput";
 import { useState } from "react";
@@ -43,17 +42,15 @@ const SignUp = () => {
         password: password,
       });
       //Handle successful login response
-      if(response.data && response.data.error){
-        setError(response.data.message)
-        return
+      if (response.data && response.data.error) {
+        setError(response.data.message);
+        return;
       }
-
 
       if (response.data && response.data.accessToken) {
         localStorage.setItem("token", response.data.accessToken);
         navigate("/dashboard");
       }
-
     } catch (e) {
       //Handle login error
       if (
@@ -70,8 +67,13 @@ const SignUp = () => {
   };
   return (
     <>
-      <Navbar />
-
+      <div className="bg-white flex items-center justify-between px-6 py-2 drop-shadow-md text-xl">
+        <h2 className="text-xl font-bold text-black py-2 mr-2">
+          <div className="flex gap-2 items-center mr-5 font-extrabold">
+            <Link to="/">Notes.</Link>
+          </div>
+        </h2>
+      </div>
       <div className="flex items-center justify-center mt-10">
         <div className="w-96 border rounded bg-white px-7 py-10 hover:drop-shadow-lg ease-in-out transition-all">
           <form onSubmit={handleSignUp}>
