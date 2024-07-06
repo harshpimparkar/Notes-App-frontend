@@ -22,7 +22,7 @@ export const Footer = () => {
               alt="gihub logo"
               className="w-10 h-10 text-white"
             />
-            <div>github</div>
+            <div>instagram</div>
           </a>
         </div>
       </div>
