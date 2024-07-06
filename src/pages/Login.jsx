@@ -1,18 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 import PasswordInput from "../components/PasswordInput";
 import { useState } from "react";
-import { validateEmail } from "../utils/helper";
 import axiosInstance from "../utils/axiosInstance";
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!validateEmail(email)) {
-      setError("Please enter valid email.");
+    if (!username) {
+      setError("Please enter the password");
       return;
     }
     if (!password) {
@@ -24,7 +23,7 @@ const Login = () => {
     //Login API Call
     try {
       const response = await axiosInstance.post("/login", {
-        email: email,
+        username: username,
         password: password,
       });
 
@@ -64,9 +63,9 @@ const Login = () => {
               type="text"
               placeholder="Email..."
               className="input-box"
-              value={email}
+              value={username}
               onChange={(e) => {
-                setEmail(e.target.value);
+                setUsername(e.target.value);
               }}
             />
             <PasswordInput
