@@ -25,6 +25,11 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
     <div className="bg-white flex items-center justify-between px-6 py-2 drop-shadow-md text-xl">
       <h2 className="text-xl font-bold text-black py-2 mr-2">
         <div className="flex gap-2 items-center mr-5 font-bold">
+          <img
+            src="/icons8-scroll-94.png"
+            alt=""
+            className="w-10 h-10 cursor-pointer"
+          />
           <Link to="/">Notes.</Link>
         </div>
       </h2>
