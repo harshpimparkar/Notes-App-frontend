@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../utils/axiosInstance";
 import { EmptyCard } from "../components/Cards/EmptyCard";
+
 const Home = () => {
   const [openAddEditModal, setOpenAddEditModal] = useState({
     isShown: false,
@@ -21,6 +22,10 @@ const Home = () => {
 
   const handleEdit = (noteDetails) => {
     setOpenAddEditModal({ isShown: true, type: "edit", data: noteDetails });
+  };
+
+  const handleRead = (noteDetails) => {
+    setOpenAddEditModal({ isShown: true, type: "read", data: noteDetails });
   };
 
   //Get User Info
@@ -121,7 +126,7 @@ const Home = () => {
         onSearchNote={onSearchNote}
         handleClearSearch={handleClearSearch}
       />
-      <div className="container mx-auto p-4 overflow-auto">
+      <div className="container mx-auto p-4 overflow-auto ">
         {allNotes.length > 0 ? (
           <div className="grid grid-cols-4 gap-4 mt-8 ">
             {allNotes.map((item) => (
@@ -140,6 +145,9 @@ const Home = () => {
                 }}
                 onPinNote={() => {
                   updatePin(item);
+                }}
+                onClick={() => {
+                  handleRead(item);
                 }}
               />
             ))}
@@ -170,7 +178,7 @@ const Home = () => {
           },
         }}
         contentLabel=""
-        className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-5 p-5 overflow-y-hidden min-h-32 drop-shadow-2xl"
+        className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-5 p-5 overflow-y-hidden min-h-32 drop-shadow-2xl text-center"
       >
         <AddEditNotes
           type={openAddEditModal.type}

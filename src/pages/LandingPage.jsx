@@ -21,7 +21,6 @@ const LandingPage = () => {
       </div>
       <div className="overflow-auto">
         <div className="flex flex-col items-center justify-center mt-10 ">
-          {/* <img src="frontend\public\icons8-library-94.png" alt="Library" /> */}
           <div className="flex flex-col items-center ">
             <div className="font-extrabold text-4xl pt text-slate-900 pb-3 hover:text-5xl transition-all ease-in-out">
               Welcome to

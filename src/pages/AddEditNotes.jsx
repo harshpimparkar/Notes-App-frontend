@@ -79,9 +79,9 @@ const AddEditNotes = ({ noteData, type, onClose , getAllNotes }) => {
   return (
     <div className="relative ">
       <MdClose
-        size={20}
+        size={22}
         onClick={onClose}
-        className="text-red-500 rounded-sm flex items-center justify-center absolute -top-3 -right-3 drop-shadow-xl"
+        className="bg-red-500 text-white cursor-pointer rounded-md flex items-center justify-center absolute -top-3 -right-3 hover:drop-shadow-xl"
       />
       <div className="flex flex-col gap-2">
         <label className="input-label">TITLE</label>

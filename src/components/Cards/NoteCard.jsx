@@ -11,11 +11,11 @@ const NoteCard = ({
   onPinNote,
 }) => {
   return (
-    <div className="border rounded p-4  bg-white hover:shadow-xl transition-all ease-in-out">
+    <div className="border rounded p-4  bg-white hover:shadow-xl transition-all ease-in-out cursor-pointer" onClick={onEdit}>
       <div className="flex items-center justify-between">
         <div>
-          <h6 className="text-base font-medium">{title}</h6>
-          <span className="text-xs text-slate-500">
+          <h6 className="text-base font-medium" onClick={onEdit}>{title}</h6>
+          <span className="text-xs text-slate-500" onClick={onEdit}>
             {moment(date).format("D MMMM YY")}
           </span>
         </div>
@@ -41,9 +41,9 @@ const NoteCard = ({
           </div>
         </div>
       </div>
-      <p className="text-sm text-slate-600 mt-2">{content?.slice(0, 60)}</p>
-      <div className="flex items-center justify-normal mt-2">
-        <div className="text-xs leading-3 text-slate-500">
+      <p className="text-sm text-slate-600 mt-2" onClick={onEdit}>{content?.slice(0, 60)}</p>
+      <div className="flex items-center justify-normal mt-2" onClick={onEdit}>
+        <div className="text-xs leading-3 text-slate-500" onClick={onEdit}>
           {tags.map((item) => `#${item}`)}
         </div>
       </div>
