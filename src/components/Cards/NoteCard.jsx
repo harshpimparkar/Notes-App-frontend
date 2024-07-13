@@ -11,7 +11,7 @@ const NoteCard = ({
   onPinNote,
 }) => {
   return (
-    <div className="border rounded p-4  bg-white hover:shadow-xl transition-all ease-in-out cursor-pointer">
+    <div className="border rounded p-4  bg-white hover:shadow-xl transition-all ease-in-out cursor-pointer min-w-10">
       <div className="flex items-center justify-between">
         <div>
           <h6 className="text-base font-medium" onClick={onEdit}>{title}</h6>
@@ -44,7 +44,7 @@ const NoteCard = ({
       <p className="text-sm text-slate-600 mt-2" onClick={onEdit}>{content?.slice(0, 20)}</p>
       <div className="flex items-center justify-normal mt-2" onClick={onEdit}>
         <div className="text-xs leading-3 text-slate-500" onClick={onEdit}>
-          {tags.map((item) => `#${item}`)}
+          #{(tags.map((item) => ` ${item} `)).slice(0,3)}....
         </div>
       </div>
     </div>
