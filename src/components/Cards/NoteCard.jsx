@@ -41,7 +41,7 @@ const NoteCard = ({
           </div>
         </div>
       </div>
-      <p className="text-sm text-slate-600 mt-2" onClick={onEdit}>{content?.slice(0, 60)}</p>
+      <p className="text-sm text-slate-600 mt-2" onClick={onEdit}>{content?.slice(0, 20)}</p>
       <div className="flex items-center justify-normal mt-2" onClick={onEdit}>
         <div className="text-xs leading-3 text-slate-500" onClick={onEdit}>
           {tags.map((item) => `#${item}`)}
